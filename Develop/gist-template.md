@@ -30,7 +30,7 @@ Below is the regular expression of a search for user input data to validate a UR
 ## Regex Components
 
 ### Anchors
-
+There are two different types of anchors in a regular expression: ^ and $. When using ^, we are looking at the string that follows it and making sure it matches. In our case with validating a URL, we use the following: /^(https?:\/\/). We want the string to match "http" or "https". The ? means that the character(s) that precede it is optional. It is not neccessary to type in the "http(s)://" to direct yourself to a website.
 ### Quantifiers
 
 ### OR Operator
@@ -42,7 +42,7 @@ Below is the regular expression of a search for user input data to validate a UR
 ### Grouping and Capturing
 
 ### Bracket Expressions
-
+When using bracket expressions we are using, you guessed it, brackets to idenity what characters we want to match. There are multiple ways to identify specific characters in our expression. In our example, our first bracket expression is [\da-z\.-]. Using \d matches any number 0-9, while a-z matches any lowercase letter between a & z.
 ### Greedy and Lazy Match
 
 ### Boundaries
