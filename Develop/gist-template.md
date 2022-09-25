@@ -50,7 +50,7 @@ When making a bracket expression we are using, you guessed it, brackets to ideni
 While using bracket expression, we are allowing multiple options to establish validity. In this portion of our expression: `[\da-z\.-]` we are checking for any digit OR any letter `a-z`. The OR operator is the `|` symbol so our expression could also be written as `[\d|a-z]` and it would serve the same function.
 
 ### Greedy and Lazy Match
-When using quantifiers we are applying one of two types of matches: greedy or lazy. By default quantifiers are greedy, meaning that are trying to match the given pattern as much as possible. You can change a quantifier to be lazy be adding a `?` after which will match the pattern the fewest amount possible.
+When using quantifiers we are applying one of two types of matches: greedy or lazy. By default quantifiers are greedy, meaning that are trying to match the given pattern as much as possible. You can change a quantifier to be lazy be adding a `?` after which will match the pattern the fewest amount possible such as in the following: `(https?:\/\/)?`. As explained above, this portion is necessary to validate a URL expression as you may be directed to a website by simply starting with `www`.
 
 ## Author
 
