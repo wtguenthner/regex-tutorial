@@ -16,9 +16,7 @@ Below is the regular expression of a search for user input data to validate a UR
   - [Regex Components](#regex-components)
     - [Anchors](#anchors)
     - [Quantifiers](#quantifiers)
-    - [OR Operator](#or-operator)
     - [Character Classes](#character-classes)
-    - [Flags](#flags)
     - [Grouping and Capturing](#grouping-and-capturing)
     - [Bracket Expressions](#bracket-expressions)
     - [Greedy and Lazy Match](#greedy-and-lazy-match)
@@ -30,19 +28,20 @@ Below is the regular expression of a search for user input data to validate a UR
 ## Regex Components
 
 ### Anchors
-There are two different types of anchors in a regular expression: ^ and $. When using ^, we are looking at the string that follows it and making sure it matches. In our case with validating a URL, we use the following: /^(https?:\/\/). We want the string to match "http" or "https". The ? means that the character(s) that precede it is optional. It is not neccessary to type in the "http(s)://" to direct yourself to a website.
-### Quantifiers
+There are two different types of anchors in a regular expression: ^ and $. When using ^, we are looking at the string that follows it and making sure it matches. In our case with validating a URL, we use the following: [/^(https?:\/\/)]. We want the string to match "http" or "https". The ? means that the character(s) that precede can be matched zero or one time. It is not neccessary to type in the "http(s)://" to direct yourself to a website.
 
-### OR Operator
+### Quantifiers
+Quantifiers are used to select a specific amount of characters in a string or a section. There are a few different ways to apply this component. In this portion of the expression, ([a-z\.]{2,6}), the curly brackets are our quantifier. When using the curly brackets we are telling the expression to match the previous string [a-z\.] a minimum of 2 times but a maximum of 6 times. Note that because we are using [a-z] it is checking for any lower case letters. For example, COdE would not match because it only contains one lower case letter. Using this expression with only one number inside of the curly brackets means the pattern must be matched for the exact number inside the brackets.
+
 
 ### Character Classes
-
-### Flags
+The character class component is used to define a specific set of characters that will validate the expression. We use a few different character classes in our example. The first is [\d] which matches any digit [0-9]. Another that we use is [\w] which matches any upper or lower case letter, any number, as well as an underscore. We are also using [.] in our expression which matches any character with the exception of the newline character. A newline character signifies the end of a line of text and the start of a new one.
 
 ### Grouping and Capturing
 
 ### Bracket Expressions
-When using bracket expressions we are using, you guessed it, brackets to idenity what characters we want to match. There are multiple ways to identify specific characters in our expression. In our example, our first bracket expression is [\da-z\.-]. Using \d matches any number 0-9, while a-z matches any lowercase letter between a & z.
+When making a bracket expression we are using, you guessed it, brackets to idenity what characters we want to match. There are multiple ways to identify specific characters in our expression. In our example, our first bracket expression is [\da-z\.-]. Using [\d] matches any number [0-9], while [a-z] matches any lowercase letter between a & z.
+
 ### Greedy and Lazy Match
 
 ### Boundaries
