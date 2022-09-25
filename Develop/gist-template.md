@@ -54,4 +54,4 @@ When using quantifiers we are applying one of two types of matches: greedy or la
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This tutorial was created by Taylor Guenthner. [Github Profile](https://github.com/wtguenthner)
